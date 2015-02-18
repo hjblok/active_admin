@@ -17,6 +17,7 @@ when /^3\.(1|2)/
   # These are the gems you have to have for Rails 3.1 to be happy
   gem 'sass-rails'
   gem 'uglifier'
+  gem "test-unit", "~>3.0" # a rails 3.2 on ruby 2.2 requirement
 else
   raise "Rails #{rails_version} is not supported yet"
 end
@@ -27,7 +28,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'haml', '~> 3.1.7',  :require => false
+  # gem 'haml', '~> 3.1.7',  :require => false
   gem 'rake', '~> 10.0.2', :require => false
   gem 'rails-i18n' # Provides default i18n for many languages
   gem 'rdiscount'  # Markdown implementation (for yard)
